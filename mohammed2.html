@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرة ذاتية | محمد باعلوي</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <style>
+        /* استخدام خط Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f; /* لون الخلفية الرئيسي */
+            color: #ccd6f6; /* لون النص الأساسي */
+        }
+        /* ألوان مخصصة مستوحاة من تصميمات المبرمجين */
+        .text-accent {
+            color: #64ffda;
+        }
+        .bg-accent {
+            background-color: #64ffda;
+        }
+        .border-accent {
+            border-color: #64ffda;
+        }
+        .bg-light-navy {
+            background-color: #112240;
+        }
+        .text-slate {
+            color: #8892b0;
+        }
+        /* تأثيرات الانتقال */
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+        /* تأثير الظهور عند التمرير */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* تخصيص شريط التمرير */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a192f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8892b0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64ffda;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-blur-sm bg-light-navy/80 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-accent">
+                <a href="#">&lt;محمد باعلوي /&gt;</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                <a href="#about" class="text-slate hover:text-accent transition-all">نبذة عني</a>
+                <a href="#skills" class="text-slate hover:text-accent transition-all">المهارات</a>
+                <a href="#projects" class="text-slate hover:text-accent transition-all">المشاريع</a>
+                <a href="#contact" class="text-slate hover:text-accent transition-all">تواصل معي</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-slate focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-light-navy">
+            <a href="#about" class="block py-2 px-4 text-sm text-slate hover:bg-accent hover:text-light-navy">نبذة عني</a>
+            <a href="#skills" class="block py-2 px-4 text-sm text-slate hover:bg-accent hover:text-light-navy">المهارات</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-slate hover:bg-accent hover:text-light-navy">تواصل معي</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center scroll-reveal">
+            <div class="max-w-4xl">
+                <p class="text-lg text-accent mb-4"> مرحباً، أنا محمد بركات باعلوي</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">.محمد بركات محمد باعلوي</h1>
+                <h2 class="text-4xl md:text-6xl font-bold text-slate mb-6">أنا <span id="typing-effect" class="text-accent"></span></h2>
+                <p class="text-lg text-slate max-w-xl mb-8">
+                    مبرمج متخصص في بناء تطبيقات ويب استثنائية. أركز حاليًا على تطوير منتجات سهلة الوصول وموجهة للمستخدم.
+                </p>
+                <a href="#contact" class="inline-block bg-transparent border-2 border-accent text-accent font-bold py-3 px-6 rounded-lg hover:bg-accent hover:text-light-navy transition-all">
+                    تواصل معي!
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 scroll-reveal">
+            <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                <span class="text-accent mr-4 text-2xl">01.</span> نبذة عني
+                <span class="flex-grow h-px bg-slate/30 ml-6"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+                <div class="md:col-span-3 text-slate text-lg">
+                    <p class="mb-4">
+                        مرحباً! أنا [محمد بركات محمد باعلوي]، مبرمج شغوف بإنشاء حلول برمجية مبتكرة ومفيدة. بدأت رحلتي في عالم البرمجة منذ [2] سنوات، ومنذ ذلك الحين، قمت بتطوير مجموعة متنوعة من المشاريع، بدءًا من المواقع البسيطة وصولًا إلى تطبيقات الويب المعقدة.
+                    </p>
+                    <p class="mb-4">
+                        أستمتع بتحويل الأفكار إلى واقع ملموس من خلال الكود، وأسعى دائمًا لتعلم تقنيات جديدة وتطوير مهاراتي باستمرار لمواكبة التطور السريع في عالم التكنولوجيا.
+                    </p>
+                    <p>
+                        هدفي هو المساهمة في بناء منتجات رقمية لا تكون فقط فعالة من الناحية التقنية، بل تقدم أيضًا تجربة مستخدم ممتعة وسلسة.
+                    </p>
+                </div>
+                <div class="md:col-span-2 flex justify-center items-start">
+                    <div class="w-64 h-64 rounded-lg overflow-hidden relative group">
+                        <img src="https://placehold.co/400x400/112240/64ffda?text=صورتك" 
+                             alt="صورة شخصية" 
+                             class="w-full h-full object-cover transition-all duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-accent/20 group-hover:bg-transparent transition-all duration-300"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 scroll-reveal">
+            <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                <span class="text-accent mr-4 text-2xl">02.</span> المهارات التقنية
+                <span class="flex-grow h-px bg-slate/30 ml-6"></span>
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
+                <!-- أضف أو أزل المهارات حسب الحاجة -->
+                <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-html5 text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">HTML5</p>
+                </div>
+                <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-css3-alt text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">CSS3</p>
+                </div>
+                <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-js-square text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">JavaScript</p>
+                </div>
+                <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-react text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">React</p>
+                </div>
+                <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-node-js text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">Node.js</p>
+                </div>
+                 <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-python text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">Python</p>
+                </div>
+                <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-git-alt text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">Git</p>
+                </div>
+                <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fas fa-database text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">SQL</p>
+                </div>
+                 <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-docker text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">Docker</p>
+                </div>
+                 <div class="bg-light-navy p-6 rounded-lg hover:scale-105 hover:-translate-y-2 transition-all">
+                    <i class="fab fa-figma text-5xl mb-3 text-accent"></i>
+                    <p class="text-white font-semibold">Figma</p>
+                </div>
+            </div>
+        </section>
+
+      
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center scroll-reveal">
+            <h2 class="text-2xl font-bold text-accent mb-2">04. ما الخطوة التالية؟</h2>
+            <h3 class="text-4xl font-bold text-white mb-4">تواصل معي</h3>
+            <p class="text-slate max-w-xl mx-auto mb-8">
+                أنا حاليًا متاح لفرص عمل جديدة ومشاريع مثيرة. إذا كان لديك سؤال أو ترغب فقط في التواصل، فلا تتردد في مراسلتي. سأبذل قصارى جهدي للرد عليك!
+            </p>
+            <a href="mailto:your-email@example.com" class="inline-block bg-accent text-light-navy font-bold py-4 px-8 rounded-lg hover:bg-opacity-80 transition-all">
+                أرسل رسالة
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8">
+        <div class="flex justify-center items-center space-x-6 space-x-reverse mb-4">
+            <a href="#" target="_blank" class="text-slate hover:text-accent transition-all"><i class="fab fa-github text-2xl"></i></a>
+            <a href="#" target="_blank" class="text-slate hover:text-accent transition-all"><i class="fab fa-linkedin-in text-2xl"></i></a>
+            <a href="#" target="_blank" class="text-slate hover:text-accent transition-all"><i class="fab fa-twitter text-2xl"></i></a>
+        </div>
+        <p class="text-center text-slate text-sm">
+            تم تصميمه وبناؤه بواسطة [محمد بركات باعلوي]
+        </p>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript for Typed.js effect
+        var options = {
+            strings: ['مطور واجهات أمامية.', 'مطور واجهات خلفية.', 'مبرمج متكامل.'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 1500,
+            loop: true
+        };
+        var typed = new Typed('#typing-effect', options);
+
+        // JavaScript for Scroll Reveal Animation
+        const scrollElements = document.querySelectorAll('.scroll-reveal');
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('visible');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+        // Initial check on page load
+        handleScrollAnimation();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden'); // Close mobile menu on click
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
